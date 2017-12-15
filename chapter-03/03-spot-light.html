@@ -113,15 +113,15 @@
 
 
         var pointColor = "#ffffff";
-        var spotLight = new THREE.SpotLight(pointColor);
+        var spotLight = new THREE.SpotLight(pointColor);//锥形效果的光源
         spotLight.position.set(-40, 60, -10);
-        spotLight.castShadow = true;
-        spotLight.shadowCameraNear = 2;
-        spotLight.shadowCameraFar = 200;
-        spotLight.shadowCameraFov = 30;
-        spotLight.target = plane;
+        spotLight.castShadow = true;//投影
+        spotLight.shadowCameraNear = 2;//投影近点
+        spotLight.shadowCameraFar = 200;//投影远点
+        spotLight.shadowCameraFov = 30;//投影视场
+        spotLight.target = plane;//决定光照的方向
         spotLight.distance = 0;
-        spotLight.angle = 0.4;
+        spotLight.angle = 0.4;//光源射出光柱有多宽
 
 
         scene.add(spotLight);
@@ -178,19 +178,19 @@
         });
 
         gui.add(controls, 'intensity', 0, 5).onChange(function (e) {
-            spotLight.intensity = e;
+            spotLight.intensity = e;//强度
         });
 
         gui.add(controls, 'distance', 0, 200).onChange(function (e) {
-            spotLight.distance = e;
+            spotLight.distance = e;//距离
         });
 
         gui.add(controls, 'exponent', 0, 100).onChange(function (e) {
-            spotLight.exponent = e;
+            spotLight.exponent = e;//光强衰减指数
         });
 
         gui.add(controls, 'debug').onChange(function (e) {
-            spotLight.shadowCameraVisible = e;
+            spotLight.shadowCameraVisible = e;//投影方式可见
         });
 
         gui.add(controls, 'castShadow').onChange(function (e) {
@@ -198,7 +198,7 @@
         });
 
         gui.add(controls, 'onlyShadow').onChange(function (e) {
-            spotLight.onlyShadow = e;
+            spotLight.onlyShadow = e;//仅阴影
         });
 
         gui.add(controls, 'target', ['Plane', 'Sphere', 'Cube']).onChange(function (e) {

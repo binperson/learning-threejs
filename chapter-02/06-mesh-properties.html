@@ -53,7 +53,7 @@
 
         // rotate and position the plane
         plane.rotation.x = -0.5 * Math.PI;
-        plane.position.x = 0;
+        plane.position.x = 0;//位置
         plane.position.y = 0;
         plane.position.z = 0;
 
@@ -104,7 +104,7 @@
 
             this.translate = function () {
 
-                cube.translateX(controls.translateX);
+                cube.translateX(controls.translateX);//平移
                 cube.translateY(controls.translateY);
                 cube.translateZ(controls.translateZ);
 
@@ -175,11 +175,11 @@
             cube.visible = controls.visible;
 
 
-            cube.rotation.x = controls.rotationX;
+            cube.rotation.x = controls.rotationX;//旋转
             cube.rotation.y = controls.rotationY;
             cube.rotation.z = controls.rotationZ;
 
-            cube.scale.set(controls.scaleX, controls.scaleY, controls.scaleZ);
+            cube.scale.set(controls.scaleX, controls.scaleY, controls.scaleZ);//缩放
 
 
             requestAnimationFrame(render);

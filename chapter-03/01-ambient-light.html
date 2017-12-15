@@ -95,11 +95,11 @@
 
         // add subtle ambient lighting
         var ambiColor = "#0c0c0c";
-        var ambientLight = new THREE.AmbientLight(ambiColor);
+        var ambientLight = new THREE.AmbientLight(ambiColor);//环境光
         scene.add(ambientLight);
 
         // add spotlight for the shadows
-        var spotLight = new THREE.SpotLight(0xffffff);
+        var spotLight = new THREE.SpotLight(0xffffff);//聚光灯
         spotLight.position.set(-40, 60, -10);
         spotLight.castShadow = true;
         scene.add(spotLight);
@@ -119,7 +119,7 @@
 
         var gui = new dat.GUI();
         gui.addColor(controls, 'ambientColor').onChange(function (e) {
-            ambientLight.color = new THREE.Color(e);
+            ambientLight.color = new THREE.Color(e);//创建一个新的Three.Color()对象
         });
         gui.add(controls, 'disableSpotlight').onChange(function (e) {
             spotLight.visible = !e;

@@ -145,16 +145,16 @@
             meshMaterial.visible = e
         });
         spGui.addColor(controls, 'ambient').onChange(function (e) {
-            meshMaterial.ambient = new THREE.Color(e)
+            meshMaterial.ambient = new THREE.Color(e)//环境色
         });
         spGui.addColor(controls, 'emissive').onChange(function (e) {
-            meshMaterial.emissive = new THREE.Color(e)
+            meshMaterial.emissive = new THREE.Color(e)//发射的
         });
         spGui.addColor(controls, 'specular').onChange(function (e) {
-            meshMaterial.specular = new THREE.Color(e)
+            meshMaterial.specular = new THREE.Color(e)//镜面的
         });
         spGui.add(controls, 'shininess', 0, 200).onChange(function (e) {
-            meshMaterial.shininess = e
+            meshMaterial.shininess = e//高光部分的亮度
         });
         spGui.add(controls, 'side', ["front", "back", "double"]).onChange(function (e) {
             console.log(e);

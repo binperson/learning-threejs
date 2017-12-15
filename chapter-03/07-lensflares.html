@@ -185,7 +185,7 @@
         var textureFlare3 = THREE.ImageUtils.loadTexture("../assets/textures/lensflare/lensflare3.png");
 
         var flareColor = new THREE.Color(0xffaacc);
-        var lensFlare = new THREE.LensFlare(textureFlare0, 350, 0.0, THREE.AdditiveBlending, flareColor);
+        var lensFlare = new THREE.LensFlare(textureFlare0, 350, 0.0, THREE.AdditiveBlending, flareColor);//纹理 尺寸 距离 融合 颜色
 
         lensFlare.add(textureFlare3, 60, 0.6, THREE.AdditiveBlending);
         lensFlare.add(textureFlare3, 70, 0.7, THREE.AdditiveBlending);
@@ -193,7 +193,7 @@
         lensFlare.add(textureFlare3, 70, 1.0, THREE.AdditiveBlending);
 
         lensFlare.position.copy(spotLight.position);
-        scene.add(lensFlare);
+        scene.add(lensFlare);//镜头眩光
 
         render();
 

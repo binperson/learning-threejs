@@ -104,7 +104,7 @@
 
 
         var pointColor = "#ff5808";
-        var directionalLight = new THREE.DirectionalLight(pointColor);
+        var directionalLight = new THREE.DirectionalLight(pointColor);//模拟远处类似太阳的光源
         directionalLight.position.set(-40, 60, -10);
         directionalLight.castShadow = true;
         directionalLight.shadowCameraNear = 2;

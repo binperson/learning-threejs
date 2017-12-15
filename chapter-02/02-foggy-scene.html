@@ -34,8 +34,8 @@
 
         // create a scene, that will hold all our elements such as objects, cameras and lights.
         var scene = new THREE.Scene();
-        //scene.fog=new THREE.FogExp2( 0xffffff, 0.015 );
-        scene.fog = new THREE.Fog(0xffffff, 0.015, 100);
+        //scene.fog=new THREE.FogExp2( 0xffffff, 0.015 );颜色和浓度
+        scene.fog = new THREE.Fog(0xffffff, 0.015, 100);//近处属性的值 远处属性的值
 
         // create a camera, which defines where we're looking at.
         var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);

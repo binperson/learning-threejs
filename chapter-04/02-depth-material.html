@@ -34,7 +34,7 @@
 
         // create a scene, that will hold all our elements such as objects, cameras and lights.
         var scene = new THREE.Scene();
-        scene.overrideMaterial = new THREE.MeshDepthMaterial();
+        scene.overrideMaterial = new THREE.MeshDepthMaterial();//网格深度材质
 
         // create a camera, which defines where we're looking at.
         var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 10, 130);

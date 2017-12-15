@@ -100,7 +100,7 @@
 
         // add spotlight for the shadows
         // add spotlight for the shadows
-        var spotLight = new THREE.SpotLight(0xffffff);
+        var spotLight = new THREE.SpotLight(0xffffff);//点光源  单点发光，照射所有方向
         spotLight.position.set(-40, 60, -10);
         spotLight.castShadow = true;
         // scene.add( spotLight );
@@ -146,15 +146,15 @@
         });
 
         gui.addColor(controls, 'pointColor').onChange(function (e) {
-            pointLight.color = new THREE.Color(e);
+            pointLight.color = new THREE.Color(e);//颜色
         });
 
         gui.add(controls, 'intensity', 0, 3).onChange(function (e) {
-            pointLight.intensity = e;
+            pointLight.intensity = e;//强度
         });
 
         gui.add(controls, 'distance', 0, 100).onChange(function (e) {
-            pointLight.distance = e;
+            pointLight.distance = e;//距离
         });
 
 

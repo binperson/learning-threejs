@@ -139,13 +139,13 @@
 
         var spGui = gui.addFolder("Mesh");
         spGui.add(controls, 'opacity', 0, 1).onChange(function (e) {
-            meshMaterial.opacity = e
+            meshMaterial.opacity = e//透明度
         });
         spGui.add(controls, 'transparent').onChange(function (e) {
-            meshMaterial.transparent = e
+            meshMaterial.transparent = e//是否透明
         });
         spGui.add(controls, 'wireframe').onChange(function (e) {
-            meshMaterial.wireframe = e
+            meshMaterial.wireframe = e//线框
         });
         spGui.add(controls, 'wireframeLinewidth', 0, 20).onChange(function (e) {
             meshMaterial.wireframeLinewidth = e
@@ -157,7 +157,7 @@
 
             switch (e) {
                 case "front":
-                    meshMaterial.side = THREE.FrontSide;
+                    meshMaterial.side = THREE.FrontSide;//侧面
                     break;
                 case "back":
                     meshMaterial.side = THREE.BackSide;
@@ -166,7 +166,7 @@
                     meshMaterial.side = THREE.DoubleSide;
                     break;
             }
-            meshMaterial.needsUpdate = true;
+            meshMaterial.needsUpdate = true;//是否刷新
         });
         spGui.addColor(controls, 'color').onChange(function (e) {
             meshMaterial.color.setStyle(e)
